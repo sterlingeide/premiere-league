@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Admin.css';
 import TopTabs from './TopTabs';
 import SecondTabs from './SecondTabs';
+import MatchWeek from './MatchWeek';
 
 const topTabList = [
     {
@@ -81,6 +82,39 @@ const secondTabList = [
     },
 ]
 
+const matchList = [
+    {
+        date: 'Saturday 18 December',
+        time: '7:00',
+        teamOne: 'AVL',
+        teamTwo: 'BUR'
+    },
+    {
+        date: 'Saturday 18 December',
+        time: '9:30',
+        teamOne: 'LEE',
+        teamTwo: 'ARS'
+    },
+    {
+        date: 'Sunday 19 December',
+        time: '6:00',
+        teamOne: 'NEW',
+        teamTwo: 'MCI'
+    },
+    {
+        date: 'Sunday 19 December',
+        time: '6:00',
+        teamOne: 'WOL',
+        teamTwo: 'CHE'
+    },
+    {
+        date: 'Sunday 19 December',
+        time: '8:30',
+        teamOne: 'TOT',
+        teamTwo: 'LIV'
+    },
+]
+
 
 const displayTopTabList = topTabList.map((c, idx) => {
     return (
@@ -91,6 +125,12 @@ const displayTopTabList = topTabList.map((c, idx) => {
 const displaySecondTabList = secondTabList.map((c, idx) => {
     return (
         <SecondTabs key={idx} index={idx} text={c.text} link={c.link} />
+    );
+})
+
+const displayMatchWeekList = matchList.map((c, idx) => {
+    return (
+        <MatchWeek key={idx} index={idx} date={c.date} time={c.time} teamOne={c.teamOne} teamTwo={c.teamTwo} />
     );
 })
 
@@ -126,12 +166,10 @@ class Admin extends Component {
                         <div className="column is-3 ">
                             <aside className="menu is-hidden-mobile">
                                 <p className="menu-label">
-                                    General
+                                    Matchweek
                                 </p>
                                 <ul className="menu-list">
-                                    <li><a className="is-active">Dashboard</a></li>
-                                    <li><a>Customers</a></li>
-                                    <li><a>Other</a></li>
+                                    {displayMatchWeekList}
                                 </ul>
                                 <p className="menu-label">
                                     Administration
