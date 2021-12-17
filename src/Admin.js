@@ -299,9 +299,7 @@ class Admin extends Component {
                 <nav className="navbar is-white">
                     <div className="container">
                         <div className="navbar-brand">
-                            <a className="navbar-item brand-text" href="../index.html">
-                                Bulma Admin
-                            </a>
+                            <img src="../images/premier-league-logo.jpg" alt="EPL Logo" width="100px" />
                             <div className="navbar-burger burger" data-target="navMenu">
                                 <span></span>
                                 <span></span>
@@ -346,11 +344,8 @@ class Admin extends Component {
                                 <div className="hero-body">
                                     <div className="container">
                                         <h1 className="title">
-                                            Hello, Admin.
+                                            English Premier League 
                                         </h1>
-                                        <h2 className="subtitle">
-                                            I hope you are having a great day!
-                                        </h2>
                                     </div>
                                 </div>
                             </section>
@@ -358,26 +353,26 @@ class Admin extends Component {
                                 <div className="tile is-ancestor has-text-centered">
                                     <div className="tile is-parent">
                                         <article className="tile is-child box">
-                                            <p className="title">439k</p>
-                                            <p className="subtitle">Users</p>
+                                            <p className="title">4.7 Billion</p>
+                                            <p className="subtitle">Global Yearly Viewers</p>
                                         </article>
                                     </div>
                                     <div className="tile is-parent">
                                         <article className="tile is-child box">
-                                            <p className="title">59k</p>
-                                            <p className="subtitle">Products</p>
+                                            <p className="title">643 Million</p>
+                                            <p className="subtitle">Average Viewers</p>
                                         </article>
                                     </div>
                                     <div className="tile is-parent">
                                         <article className="tile is-child box">
-                                            <p className="title">3.4k</p>
-                                            <p className="subtitle">Open Orders</p>
+                                            <p className="title">20</p>
+                                            <p className="subtitle">Teams</p>
                                         </article>
                                     </div>
                                     <div className="tile is-parent">
                                         <article className="tile is-child box">
-                                            <p className="title">19</p>
-                                            <p className="subtitle">Exceptions</p>
+                                            <p className="title">1</p>
+                                            <p className="subtitle">Champion</p>
                                         </article>
                                     </div>
                                 </div>
