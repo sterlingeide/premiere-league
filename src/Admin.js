@@ -3,6 +3,7 @@ import './Admin.css';
 import TopTabs from './TopTabs';
 import SecondTabs from './SecondTabs';
 import MatchWeek from './MatchWeek';
+import Standings from './Standings';
 
 const topTabList = [
     {
@@ -115,6 +116,156 @@ const matchList = [
     },
 ]
 
+const standingsList = [
+    {
+        position: 'Pos',
+        club: 'Club',
+        pi: 'PI',
+        gd: 'GD',
+        pts: 'Pts'
+    },
+    {
+        position: '1',
+        club: 'Man City',
+        pi: '17',
+        gd: '+31',
+        pts: '41'
+    },
+    {
+        position: '2',
+        club: 'Liverpool',
+        pi: '17',
+        gd: '+35',
+        pts: '40'
+    },
+    {
+        position: '3',
+        club: 'Chelsea',
+        pi: '17',
+        gd: '+27',
+        pts: '37'
+    },
+    {
+        position: '4',
+        club: 'Arsenal',
+        pi: '17',
+        gd: '+1',
+        pts: '29'
+    },
+    {
+        position: '5',
+        club: 'West Ham',
+        pi: '17',
+        gd: '+7',
+        pts: '28'
+    },
+    {
+        position: '6',
+        club: 'Man Utd',
+        pi: '16',
+        gd: '+2',
+        pts: '27'
+    },
+    {
+        position: '7',
+        club: 'Spurs',
+        pi: '14',
+        gd: '-1',
+        pts: '25'
+    },
+    {
+        position: '8',
+        club: 'Wolves',
+        pi: '17',
+        gd: '-1',
+        pts: '24'
+    },
+    {
+        position: '9',
+        club: 'Leicester',
+        pi: '16',
+        gd: '0',
+        pts: '22'
+    },
+    {
+        position: '10',
+        club: 'Aston Villa',
+        pi: '17',
+        gd: '-2',
+        pts: '22'
+    },
+    {
+        position: '11',
+        club: 'Crystal Palace',
+        pi: '17',
+        gd: '0',
+        pts: '20'
+    },
+    {
+        position: '12',
+        club: 'Brentford',
+        pi: '16',
+        gd: '-1',
+        pts: '20'
+    },
+    {
+        position: '13',
+        club: 'Brighton',
+        pi: '16',
+        gd: '-3',
+        pts: '20'
+    },
+    {
+        position: '14',
+        club: 'Everton',
+        pi: '17',
+        gd: '-8',
+        pts: '19'
+    },
+    {
+        position: '15',
+        club: 'Southampton',
+        pi: '17',
+        gd: '-10',
+        pts: '17'
+    },
+    {
+        position: '16',
+        club: 'Leeds',
+        pi: '17',
+        gd: '-15',
+        pts: '16'
+    },
+    {
+        position: '17',
+        club: 'Watford',
+        pi: '16',
+        gd: '-10',
+        pts: '13'
+    },
+    {
+        position: '18',
+        club: 'Burnley',
+        pi: '15',
+        gd: '-7',
+        pts: '11'
+    },
+    {
+        position: '19',
+        club: 'Newcastle',
+        pi: '17',
+        gd: '-19',
+        pts: '10'
+    },
+    {
+        position: '20',
+        club: 'Norwich',
+        pi: '17',
+        gd: '-26',
+        pts: '10'
+    },
+]
+
 
 const displayTopTabList = topTabList.map((c, idx) => {
     return (
@@ -131,6 +282,12 @@ const displaySecondTabList = secondTabList.map((c, idx) => {
 const displayMatchWeekList = matchList.map((c, idx) => {
     return (
         <MatchWeek key={idx} index={idx} date={c.date} time={c.time} teamOne={c.teamOne} teamTwo={c.teamTwo} />
+    );
+})
+
+const displayStandingsList = standingsList.map((c, idx) => {
+    return (
+        <Standings key={idx} index={idx} position={c.position} club={c.club} pi={c.pi} gd={c.gd} points={c.pts}/>
     );
 })
 
@@ -172,32 +329,10 @@ class Admin extends Component {
                                     {displayMatchWeekList}
                                 </ul>
                                 <p className="menu-label">
-                                    Administration
+                                    Standings
                                 </p>
                                 <ul className="menu-list">
-                                    <li><a>Team Settings</a></li>
-                                    <li>
-                                        <a>Manage Your Team</a>
-                                        <ul>
-                                            <li><a>Members</a></li>
-                                            <li><a>Plugins</a></li>
-                                            <li><a>Add a member</a></li>
-                                            <li><a>Remove a member</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a>Invitations</a></li>
-                                    <li><a>Cloud Storage Environment Settings</a></li>
-                                    <li><a>Authentication</a></li>
-                                    <li><a>Payments</a></li>
-                                </ul>
-                                <p className="menu-label">
-                                    Transactions
-                                </p>
-                                <ul className="menu-list">
-                                    <li><a>Payments</a></li>
-                                    <li><a>Transfers</a></li>
-                                    <li><a>Balance</a></li>
-                                    <li><a>Reports</a></li>
+                                    {displayStandingsList}
                                 </ul>
                             </aside>
                         </div>
