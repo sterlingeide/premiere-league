@@ -4,6 +4,7 @@ import TopTabs from './TopTabs';
 import SecondTabs from './SecondTabs';
 import MatchWeek from './MatchWeek';
 import Standings from './Standings';
+import News from './News';
 
 const topTabList = [
     {
@@ -266,6 +267,33 @@ const standingsList = [
     },
 ]
 
+const newsList = [
+    {
+        title: 'Conte faces first major test at Spurs against Liverpool',
+        link: 'https://www.premierleague.com/news/2420314'
+    },
+    {
+        title: 'Shearer: Getting vaccinated will help others',
+        link: 'https://www.premierleague.com/news/2418855'
+    },
+    {
+        title: 'Can Burnley extend their longest unbeaten run at Villa?',
+        link: 'https://www.premierleague.com/news/2413889'
+    },
+    {
+        title: 'Match officials for Matchweek 18',
+        link: 'https://www.premierleague.com/news/2413760'
+    },
+    {
+        title: 'Klopp: Listen to experts and get the jab',
+        link: 'https://www.premierleague.com/news/2418399'
+    },
+    {
+        title: 'Leeds look to extend unbeaten home run to six matches',
+        link: 'https://www.premierleague.com/news/2413893'
+    }
+]
+
 
 const displayTopTabList = topTabList.map((c, idx) => {
     return (
@@ -288,6 +316,12 @@ const displayMatchWeekList = matchList.map((c, idx) => {
 const displayStandingsList = standingsList.map((c, idx) => {
     return (
         <Standings key={idx} index={idx} position={c.position} club={c.club} pi={c.pi} gd={c.gd} points={c.pts}/>
+    );
+})
+
+const displayNewsList = newsList.map((c, idx) => {
+    return (
+        <News key={idx} index={idx} title={c.title} link={c.link} />
     );
 })
 
@@ -382,7 +416,7 @@ class Admin extends Component {
                                     <div className="card events-card">
                                         <header className="card-header">
                                             <p className="card-header-title">
-                                                Events
+                                                Latest News
                                             </p>
                                             <a href="#" className="card-header-icon" aria-label="more options">
                                                 <span className="icon">
@@ -394,51 +428,7 @@ class Admin extends Component {
                                             <div className="content">
                                                 <table className="table is-fullwidth is-striped">
                                                     <tbody>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i className="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td className="level-right"><a className="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
+                                                        {displayNewsList}
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -452,7 +442,7 @@ class Admin extends Component {
                                     <div className="card">
                                         <header className="card-header">
                                             <p className="card-header-title">
-                                                Inventory Search
+                                                Search Teams
                                             </p>
                                             <a href="#" className="card-header-icon" aria-label="more options">
                                                 <span className="icon">
@@ -477,7 +467,7 @@ class Admin extends Component {
                                     <div className="card">
                                         <header className="card-header">
                                             <p className="card-header-title">
-                                                User Search
+                                                Search Players
                                             </p>
                                             <a href="#" className="card-header-icon" aria-label="more options">
                                                 <span className="icon">
