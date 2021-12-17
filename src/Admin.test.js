@@ -30,9 +30,3 @@ test('renders dashboard tag', () => {
     const navbarElement = screen.getByText(/Fantasy/);
     expect(navbarElement).toBeInTheDocument();
 });
-
-test('renders dashboard tag', () => {
-    render(<Admin />);
-    const navbarElement = screen.getByText(/Premier League/);
-    expect(navbarElement).toBeInTheDocument();
-});
