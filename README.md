@@ -1,5 +1,10 @@
+Top Tab:
 ![image](./public/images/component-one.png)
-![image](./public/images/component-two.png)
-![image](./public/images/component-three.png)
-![image](./public/images/component-four.png)
+Second Tab:
 ![image](./public/images/component-five.png)
+MatchWeek:
+![image](./public/images/component-two.png)
+Standings:
+![image](./public/images/component-three.png)
+News:
+![image](./public/images/component-four.png)
