@@ -1,5 +1,5 @@
 <h1>User Story </h1>
-<p>To cheack on recent news, stats, and anything else about the premier league.</p>
+<p>To check on recent news, stats, and anything else about the premier league.</p>
 
 <h1>Completed App </h1>
 
