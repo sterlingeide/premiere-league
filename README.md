@@ -92,6 +92,6 @@ test('renders dashboard tag', () => {
 
 ![image](./public/images/component-four.png)
 
-<h1>NPM Tests</h1>
+<h1>NPM Test</h1>
 
 ![image](./public/images/premiere-league-tests.png)
